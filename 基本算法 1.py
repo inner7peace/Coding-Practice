@@ -5,9 +5,27 @@ Bob没有一点方向感，因此他每次都随机的向上下左右四个方�
 第二天，Alice质问Bob为什么放她鸽子，Bob说他昨天花了s步到达了约会地点。
 Alice怀疑Bob是不是说谎了。你能否帮她验证一下？’‘’
 
+
+## 写法1
 x, y, s = [abs(int(i)) for i in raw_input().split()]
 if(x+y<=s and (s-x-y)%2==0):
 	print "Yes"
 else:
 	print "No"
 
+	
+## 写法2
+def func():
+    while 1:
+        initVal = raw_input()
+        a, b, s = map(int, initVal.split())
+        # a, b, s = [int(i) for i in initVal.split()]
+        a = abs(a)
+        b = abs(b)
+        if a + b <= s and (s - a - b) % 2 == 0:
+            print 'Yes'
+        else:
+            print 'No'
+
+if __name__ == '__main__':
+    func()
